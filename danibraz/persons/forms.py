@@ -16,10 +16,3 @@ class PersonsForm(forms.ModelForm):
         model = Client
         fields = '__all__'
 
-    # layout = Layout(
-    #     Fieldset("Inclua um cliente",
-    #              Row('name', ),
-    #              Row('birthday','purchase_limit'),
-    #              Row(Span6('address'),Span6('compra_sempre'), ),
-    #              )
-    # )
