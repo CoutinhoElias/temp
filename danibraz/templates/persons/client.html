@@ -1,0 +1,108 @@
+<!--INCLUINDO O FORM FICA LEGAL E SEM FUNCIONAR, RETIRANDO FICA FEIO EM FUNCIONANDO-->
+{% extends "account/base.html" %}
+<!--{% load static %}-->
+
+
+
+{% block inner %}
+{% load bootstrap3 %}
+
+{# Display a form #}
+
+<form method="post" class="form">
+
+
+						<!-- BEGIN VERTICAL FORM FLOATING LABELS -->
+
+							<div class="col-lg-offset-1 col-md-8">
+								<form class="form">
+									<div class="card">
+										<div class="card-head style-primary">
+											<header>Cadastro de cliente</header>
+										</div>
+										<div class="card-body floating-label">    {% csrf_token %}
+                                            {% bootstrap_form form %}
+<!--                                            {% buttons %}
+                                                <button type="submit" class="btn btn-primary">
+                                                    {% bootstrap_icon "star" %} Submit
+                                                </button>
+                                            {% endbuttons %}-->
+										</div><!--end .card-body -->
+										<div class="card-actionbar">
+											<div class="card-actionbar-row">
+												<button type="submit" class="btn btn-flat btn-primary ink-reaction">Adiciona</button>
+											</div>
+										</div>
+									</div><!--end .card -->
+
+								</form>
+							</div><!--end .col -->
+						</div><!--end .row -->
+						<!-- END VERTICAL FORM FLOATING LABELS -->
+    						<!-- BEGIN VERTICAL FORM FLOATING LABELS -->
+						<div class="row">
+							<div class="col-lg-12">
+								<h4>Exemplo funcionando ===></h4>
+							</div><!--end .col -->
+							<div class="col-lg-3 col-md-4">
+								<article class="margin-bottom-xxl">
+									<p>
+                                        Porque os dois primeiros campos tem o efeito do material design
+                                        e os do form acima não?
+									</p>
+								</article>
+							</div><!--end .col -->
+							<div class="col-lg-offset-1 col-md-8">
+								<form class="form">
+									<div class="card">
+										<div class="card-head style-primary">
+											<header>Create an account</header>
+										</div>
+										<div class="card-body floating-label">
+
+											<br/>
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" id="Firstname2">
+														<label for="Firstname2">Firstname</label>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<input type="text" class="form-control" id="Lastname2">
+														<label for="Lastname2">Lastname</label>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" id="Username2">
+												<label for="Username2">Username</label>
+											</div>
+											<div class="form-group">
+												<input type="password" class="form-control" id="Password2">
+												<label for="Password2">Password</label>
+											</div>
+											<div class="checkbox checkbox-styled">
+												<label>
+													<input type="checkbox" value="">
+													<span>Send me weekly updates</span>
+												</label>
+											</div>
+										</div><!--end .card-body -->
+										<div class="card-actionbar">
+											<div class="card-actionbar-row">
+												<button type="submit" class="btn btn-flat btn-primary ink-reaction">Create account</button>
+											</div>
+										</div>
+									</div><!--end .card -->
+									<em class="text-caption">Vertical layout with floating labels</em>
+								</form>
+							</div><!--end .col -->
+						</div><!--end .row -->
+						<!-- END VERTICAL FORM FLOATING LABELS -->
+</form>
+
+{% endblock %}
+
+
