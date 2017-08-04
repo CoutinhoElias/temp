@@ -1,0 +1,27 @@
+{% extends "account/base.html" %}
+<!--{% load static %}-->
+
+
+
+<!--{% include 'material/includes/material_css.html' %}
+<script src="{% static 'material/js/jquery.js' %}"></script>
+{% include 'material/includes/material_js.html' %}-->
+
+
+{% load material_form %}
+
+{% load i18n %}
+
+
+{% block head_title %}{% trans "Agendamento" %}{% endblock %}
+
+{% block inner %}
+     <form method="post" action="" class="">
+
+        {% crispy form %}
+        {% crispy formset %}
+
+    </form>
+
+
+{% endblock %}

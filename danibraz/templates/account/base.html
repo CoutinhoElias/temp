@@ -1,18 +1,14 @@
 {% extends "base.html" %}
-
 {% block title %}{% block head_title %}{% endblock head_title %}{% endblock title %}
 
 {% block content %}
-<!-- BEGIN CONTENT-->
-<div id="content">
+<div class="row">
+<!--    <div class="expand-on-small-only col s12 m8 offset-m2 l8 offset-l2">-->
 
-    <div class="row">
-
-            {% block inner %}{% endblock %}
-
+    <div class="expand-on-small-only col s12">
+      <div class="card-panel">
+        {% block inner %}{% endblock %}
+      </div>
     </div>
-
-</div><!--end #content-->
-<!-- END CONTENT -->
-
+</div>
 {% endblock %}
